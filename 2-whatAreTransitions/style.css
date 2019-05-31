@@ -1,0 +1,29 @@
+/* TRANSITION
+-change the property of a specific element smoothly */
+
+button,
+input {
+  height: 90px;
+  width: 290px;
+  font-size: 28px;
+  color: white;
+  border: none;
+  background-color: blue;
+  /* MUST INPUT TWO ITEMS - 1 - the css property - 2 - the duration */
+  transition-property: background-color;
+
+  /* transition-duration - `s` or `ms` */
+  /* how long the transition lasts */
+  transition-duration: 3s;
+
+  /* transition-delay: - `s` or `ms` */
+  /* how long to wait before starting the transition */
+  transition-delay: 1s;
+}
+
+button:hover {
+  background-color: green;
+}
+input:focus {
+  background-color: purple;
+}

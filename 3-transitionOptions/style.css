@@ -1,0 +1,63 @@
+body {
+  background-color: blanchedalmond;
+}
+.container {
+  width: 600px;
+  z-index: 90;
+  background-color: thistle;
+  overflow: hidden;
+}
+
+.move {
+  z-index: 1;
+  margin: 2em;
+  width: 150px;
+  height: 50px;
+  padding: 10px 15px;
+  background-color: red;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 0.5em;
+  font-size: 20px;
+  box-shadow: 5px 10px #888888;
+  /* responsible for the initial movement from left to right (to the elements position) */
+  transition-property: translate();
+  transition-duration: 2000ms;
+}
+
+/* Transition-Timing-Function 
+
+- how the change in the property will occur 
+- EASE - is the default
+*/
+/* slow - fast - slow  */
+#ease {
+  transition-timing-function: ease;
+  /* transition-timing-function: steps(4, jump-end); */
+  /* transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1); */
+}
+
+/* consistent pace */
+#linear {
+  transition-timing-function: linear;
+}
+
+/* slow - fast */
+#ease-in {
+  transition-timing-function: ease-in;
+}
+
+/* fast - slow */
+#ease-out {
+  transition-timing-function: ease-out;
+}
+/* similar to ease */
+#ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.move:hover {
+  /* translate(x, y) */
+  transform: translate(900px, 0);
+}
