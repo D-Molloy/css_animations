@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transition</title>
+    <style type="text/css">
+      img {
+        width: 300px;
+        display: block;
+        margin: auto;
+        margin-top: 200px;
+        transition: transform 2s;
+      }
+
+      /* change skew direction by using negative values */
+      /* positve - clockwise */
+      /* negative - counter clockwise */
+      img:hover {
+        transform: skewY(-20deg);
+        /* transform: skewY(20deg); */
+        /* transform: skewX(90deg); */
+        /* transform: skew(20deg, 40deg); */
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="cat.jpg" alt="" />
+  </body>
+</html>
