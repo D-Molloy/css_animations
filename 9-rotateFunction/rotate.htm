@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transition</title>
+    <style type="text/css">
+      img {
+        width: 300px;
+        display: block;
+        margin: auto;
+        margin-top: 200px;
+        transition: transform ease-in 2s;
+      }
+
+      /* Applying multiple tranforms -      /* transform: rotate(10turn) scale(5); */
+
+      /* accepted units */
+
+      /* deg (degrees) - most common */
+      /* turn */
+      /* grad - 1 full circle is 400 gradient */
+
+      /* positive arg - clockwise */
+      /* negative arg - counterclockwise */
+
+      img:hover {
+        transform: rotate(200grad);
+        /* transform: rotate(10turn) scale(5); */
+
+        /* transform: rotate(270deg); */
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="cat.jpg" alt="" />
+  </body>
+</html>
