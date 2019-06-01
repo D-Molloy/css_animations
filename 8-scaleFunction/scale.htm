@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transition</title>
+    <style type="text/css">
+      img {
+        width: 300px;
+        display: block;
+        margin: auto;
+        margin-top: 200px;
+        transition: transform 2s;
+      }
+      p {
+        color: black;
+        font-size: 40px;
+        transition: transform 1s;
+        text-align: center;
+      }
+      /* SCALE - resize (w/h html elements) */
+      /* arg - 2 = twice the orig size */
+      /*  */
+      img:hover,
+      p:hover {
+        /* negative numbers flip the item */
+        transform: scale(5, -2);
+        /* transform: scale(5, 4); */
+        /* transform: scaleY(5); */
+        /* transform: scaleX(5); */
+        /* transform: scale(5); */
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="cat.jpg" alt="" />
+    <p>HELLO WORLD!</p>
+  </body>
+</html>
