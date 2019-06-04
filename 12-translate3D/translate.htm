@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>translate in 3D</title>
+    <style type="text/css">
+      /* 2d  - x & y*/
+      /* 3d - x & y & z */
+
+      /* Z === perspective - the distance between our eyes and computer*/
+
+      /* perspective MUST be set for 3d */
+
+      /* FROM CSSTRICKS */
+      /* The perspective CSS property gives an element a 3D-space by affecting the distance between the Z plane and the user.
+The strength of the effect is determined by the value. The smaller the value, the closer you get from the Z plane and the more impressive the visual effect. The greater the value, the more subtle will be the effect.
+Important: Please note the perspective property doesn't affect how the element is rendered; it simply enables a 3D-space for children elements. This is the main difference between the transform: perspective() function and the perspective property. The first gives element depth while the later creates a 3D-space shared by all its transformed children. */
+
+      body {
+        /* perspecitve MUST be added to the parent element  */
+        /* the distance between the screen and our eyes */
+        perspective: 500px;
+      }
+
+      img {
+        width: 300px;
+        display: block;
+        margin: auto;
+        margin-top: 200px;
+        transition: transform 1s;
+      }
+
+      img:hover {
+        /* move 400px forward in the z direction */
+        /* different from scale() because the image width/height isn't changing, its just getting closer */
+        /* think of the pixel value as how far along the perspective the image travels */
+        transform: translateZ(200px);
+        /* transform: translateZ(400px); */
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="cat.jpg" alt="" />
+  </body>
+</html>
