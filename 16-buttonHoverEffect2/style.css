@@ -1,0 +1,71 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #351435;
+  /* width: 100%; */
+  font-family: sans-serif;
+  font-size: 40px;
+  border: 3px solid #351435;
+  padding: 40px 80px;
+  position: relative;
+  /* responsible for smooth transition of button color */
+  transition: all 1s;
+  overflow: hidden;
+}
+a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ec56ae;
+  /* keep button text at forefront */
+  z-index: -1;
+  /* swipe from left */
+  /* transform: translateX(-100%); */
+  /* swipe from right */
+  transform: translateX(-100%);
+
+  transition: all ease-out 1s;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #351435;
+  /* keep button text at forefront */
+  z-index: -2;
+  /* swipe from left */
+  /* transform: translateX(-100%); */
+  /* swipe from right */
+  transform: translateX(100%);
+  transition: all 1s;
+}
+
+a:hover:before {
+  transform: translateX(0);
+}
+
+a:hover {
+  color: white;
+}
+
+a:hover:after {
+  transform: translateX(0);
+}
+
+a:hover {
+  color: white;
+}
